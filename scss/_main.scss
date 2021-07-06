@@ -114,71 +114,52 @@ width:60px;
 	
 }
 #tipos{
-	.subBloques__parrafos{
+	#tituloParrafo{
+		h2{
+			padding:1%;
+			
+
+			font-weight: $fuenteR-bold;
+
+		}
+
+	}
+
+	.subBloques__grilla{
+	width:95%;
+	margin:auto;
 	display: grid;
-	grid-template-areas: 
-	"ti ti ti"
-	"pl1 pl2 pl3"
-	"pl4 pl5 pl6"
-	;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows:1fr 3.2fr 3.2fr;
-
-		@media all and (max-width: 768px){
-			display: grid;
-			grid-template-areas: 
-			"ti ti"
-			"pl1 pl2"
-			"pl3 pl4"
-			"pl5 pl6"
-			;
-			grid-template-columns:1fr 1fr;
-			grid-template-rows:1fr 3.2fr 3.2fr;
-		}
-
-		@media all and (max-width: 576px){
-			display: grid;
-			grid-template-areas: 
-			"ti"
-			"pl1"
-			"p2"
-			"p3"
-			"p4"
-			"p5"
-			"p6"
-			;
-			grid-template-columns:1fr;
-			grid-template-rows:3fr 5.2fr 5.2fr;
-		} 
-
-
-		img{
-		width: ($ancho*35)/100;
-		}
-		.dedoNiño{
-		width: 25%;
-
-			@media all and (max-width: 768px){
-				width: ($ancho*30)/100;
-
-			}
-			@media all and (max-width: 576px){
-				width: ($ancho*35)/100;
-
-			}
-		}	
+	gap: 1rem;
+	grid-auto-rows: 22rem;
+	grid-template-columns: repeat(auto-fill, minmax(22rem,1fr));
 
 	}
+	.grilla__bloques{
+		border:1px solid #010101;
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+		background-color: #f8f8f8;
+	}
+	
 
-}
-#tituloParrafo{
-	grid-area:ti;
-	height: 10px;
+	.tipos__nombres{
+		width:50%;
+		margin:auto;
+		text-align:center;
 
-	@media only screen and (max-width: 768px){
+
 
 	}
+	img{
+		width: 22.5rem;
+		margin: auto;
+		display: flex;
+	}
+
+
+	
+
 }
+
 
 #productos{
 	h2{
