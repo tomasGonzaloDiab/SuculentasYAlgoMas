@@ -19,6 +19,14 @@
     .fondoPrincipal .fondoPrincipal_menu h1 {
       font-family: "Merienda", sans-serif;
       padding-bottom: 1%; }
+  @media all and (max-width: 768px) {
+    .fondoPrincipal {
+      background-image: url(../media/fondoInicio2.jpg);
+      background-repeat: none; } }
+  @media all and (max-width: 550px) {
+    .fondoPrincipal {
+      background-image: url(../media/fondoInicio2.jpg);
+      background-repeat: none; } }
 
 header {
   display: flex;
@@ -111,13 +119,19 @@ header {
   width: 50%;
   margin: auto;
   text-align: center; }
+  @media all and (max-width: 768px) {
+    #tipos .tipos__nombres {
+      width: 80%; } }
 
 #tipos .btn-check:focus + .btn, #tipos .btn:focus {
   box-shadow: none; }
 
 #tipos .modal-content {
-  height: 50rem;
+  height: 100%;
   width: 45rem; }
+  @media all and (max-width: 768px) {
+    #tipos .modal-content {
+      width: 25rem; } }
 
 #tipos img {
   width: 22.5rem;
@@ -133,6 +147,10 @@ header {
   bottom: 2%;
   left: 81.5%;
   z-index: 10; }
+  @media all and (max-width: 768px) {
+    .logoW {
+      width: 3rem;
+      left: 85%; } }
 
 .logoFinal {
   width: 28%;

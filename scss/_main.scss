@@ -24,6 +24,16 @@
 		
 		}
 	}
+	@media all and (max-width: 768px){
+		background-image: url(../media/fondoInicio2.jpg);
+		background-repeat: none;
+	}
+	@media all and (max-width: 550px){
+		background-image: url(../media/fondoInicio2.jpg);
+		background-repeat: none;
+	}
+
+
 }
 
 
@@ -145,6 +155,10 @@ width:60px;
 		width:50%;
 		margin:auto;
 		text-align:center;
+		@media all and (max-width: 768px){
+			width:80%;
+
+		}
 
 
 
@@ -154,8 +168,14 @@ width:60px;
 
 	}
 	.modal-content{
-		height:50rem;
+		height:100%;
 		width:45rem;
+
+		@media all and (max-width: 768px){
+		width:25rem;
+	}
+
+
 	}
 	img{
 		width: 22.5rem;
@@ -182,6 +202,12 @@ width:60px;
 	bottom:2%;
 	left:81.5%;
 	z-index: 10;
+	@media all and (max-width: 768px){
+		width:3rem;
+		left:85%;
+	}
+
+
 }
 .logoFinal{
 	width: ($ancho*28)/100;
