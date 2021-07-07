@@ -149,6 +149,14 @@ width:60px;
 
 
 	}
+	.btn-check:focus + .btn, .btn:focus{
+		box-shadow: none;
+
+	}
+	.modal-content{
+		height:45rem;
+		width:45rem;
+	}
 	img{
 		width: 22.5rem;
 		margin: auto;

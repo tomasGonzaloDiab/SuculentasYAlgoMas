@@ -112,6 +112,13 @@ header {
   margin: auto;
   text-align: center; }
 
+#tipos .btn-check:focus + .btn, #tipos .btn:focus {
+  box-shadow: none; }
+
+#tipos .modal-content {
+  height: 45rem;
+  width: 45rem; }
+
 #tipos img {
   width: 22.5rem;
   margin: auto;
