@@ -8,7 +8,7 @@
 	background-image: url(../media/sucuFondoPri1.jpg);
 	background-repeat: none;
 	height:100vh;
-	.fondoPrincipal_menu{
+	.fondoPrincipal__menu{
 		  display: flex;
 		  flex-direction: column;
 		  justify-content: center;
@@ -16,7 +16,22 @@
 		  align-content: center;
 		  height: 80vh;
 
+		.fondo__boton{
+			background-color: #4CAF50; /* Green */
+		    border: none;
+		    color: white;
+		    padding: 16px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		    cursor: pointer;
 
+
+		  }
 		h1{
 			
 			font-family:$fuenteM;
@@ -27,14 +42,46 @@
 	@media all and (max-width: 768px){
 		background-image: url(../media/fondoInicio2.jpg);
 		background-repeat: none;
+		
 	}
 	@media all and (max-width: 550px){
+
 		background-image: url(../media/fondoInicio2.jpg);
 		background-repeat: none;
 	}
 
 
 }
+/*clase predefinida de botones*/
+.button{
+	background-color: $cHead; 
+	border: none;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: $fuente-m;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+.button1 {
+    background-color: white;
+    border-radius: 24px; 
+    color: black; 
+	transition-duration: 0.3s;
+    border: 2px solid $cHead;
+
+}
+
+.button1:hover {
+    background-color: $cHead;
+    color: white;
+	transform:scale(1.1);
+}
+
+
 
 
 
