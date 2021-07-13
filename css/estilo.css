@@ -34,6 +34,9 @@
     .fondoPrincipal .fondoPrincipal__menu h1 {
       font-family: "Merienda", sans-serif;
       padding-bottom: 1%; }
+    @media all and (max-width: 768px) {
+      .fondoPrincipal .fondoPrincipal__menu {
+        padding-bottom: 30%; } }
   @media all and (max-width: 768px) {
     .fondoPrincipal {
       background-image: url(../media/fondoInicio2.jpg);
@@ -42,6 +45,11 @@
     .fondoPrincipal {
       background-image: url(../media/fondoInicio2.jpg);
       background-repeat: none; } }
+  @media all and (max-width: 768px) {
+    .fondoPrincipal .fondoPrincipal__botones {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 /*clase predefinida de botones*/
 .button {
@@ -62,9 +70,22 @@
   border-radius: 24px;
   color: black;
   transition-duration: 0.3s;
-  border: 2px solid #a9ba5a; }
+  border: 2px solid #a9ba5a;
+  width: 14rem; }
 
 .button1:hover {
+  background-color: #a9ba5a;
+  color: white;
+  transform: scale(1.1); }
+
+.button2 {
+  background-color: white;
+  border-radius: 12px;
+  color: black;
+  font-size: 18px;
+  transition-duration: 0.3s; }
+
+.button2:hover {
   background-color: #a9ba5a;
   color: white;
   transform: scale(1.1); }
@@ -139,49 +160,85 @@ header {
   padding-top: 0.5%;
   padding-left: 5%; }
 
-#tipos #tituloParrafo h2 {
-  padding: 1%;
-  font-weight: 700; }
-
-#tipos .subBloques__grilla {
+.subBloques__parrafos .subBloques__grilla {
   width: 95%;
   margin: auto;
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 22rem;
+  grid-auto-rows: 23rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); }
 
-#tipos .grilla__bloques {
+.subBloques__parrafos .grilla__bloques {
   border: 1px solid #010101;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   background-color: #f8f8f8; }
 
-#tipos .tipos__nombres {
+.subBloques__parrafos .tipos__nombres {
   width: 50%;
   margin: auto;
   text-align: center; }
   @media all and (max-width: 768px) {
-    #tipos .tipos__nombres {
+    .subBloques__parrafos .tipos__nombres {
       width: 80%; } }
 
-#tipos .btn-check:focus + .btn, #tipos .btn:focus {
+.subBloques__parrafos .btn-check:focus + .btn, .subBloques__parrafos .btn:focus {
   box-shadow: none; }
 
-#tipos .modal-content {
+.subBloques__parrafos .modal-content {
   height: 100%;
   width: 45rem; }
   @media all and (max-width: 768px) {
-    #tipos .modal-content {
+    .subBloques__parrafos .modal-content {
       width: 25rem; } }
 
-#tipos img {
+.subBloques__parrafos img {
   width: 22.5rem;
   margin: auto;
   display: flex; }
 
+#tituloParrafo h2 {
+  padding: 1%;
+  font-weight: 700; }
+
 #productos h2 {
   padding-top: 1rem;
   padding-bottom: 1rem; }
+
+#producto .subBloques__grilla {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 35rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr)); }
+
+#producto .grilla__bloques {
+  border: 1px solid #010101;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #f8f8f8; }
+
+#producto .tipos__nombres {
+  width: 50%;
+  margin: auto;
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #producto .tipos__nombres {
+      width: 80%; } }
+
+#producto .btn-check:focus + .btn, #producto .btn:focus {
+  box-shadow: none; }
+
+#producto .modal-content {
+  height: 100%;
+  width: 45rem; }
+  @media all and (max-width: 768px) {
+    #producto .modal-content {
+      width: 25rem; } }
+
+#producto img {
+  width: 22.5rem;
+  margin: auto;
+  display: flex; }
 
 .logoW {
   position: fixed;
@@ -205,8 +262,18 @@ header {
   .logo-back img:hover {
     height: 11%; }
 
-.redes img {
-  width: 150px; }
+#contactanos .bloqueContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#contactanos .mapa {
+  width: 50%; }
+
+#contactanos .redes {
+  width: 50%; }
+  #contactanos .redes img {
+    width: 150px; }
 
 a {
   text-decoration: none; }
