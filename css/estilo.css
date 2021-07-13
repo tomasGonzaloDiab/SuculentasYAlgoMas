@@ -266,6 +266,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media all and (max-width: 768px) {
+    #contactanos .bloqueContacto {
+      flex-direction: column;
+      align-items: flex-start; } }
 
 #contactanos .mapa {
   width: 50%; }

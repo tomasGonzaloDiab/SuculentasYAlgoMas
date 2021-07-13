@@ -358,15 +358,21 @@ width:60px;
 		display:flex;
 		justify-content:center;
 		align-items:center;
+		@media all and (max-width: 768px){
+		flex-direction:column;
+		align-items:flex-start;
+		}
 
 
 	}
 	.mapa{
 		width:50%;
+		
 	}
 		
 	.redes{
 		width:50%;
+		
 		img{
 			width:150px;
 		}
