@@ -8,7 +8,7 @@
 	background-image: url(../media/sucuFondoPri1.jpg);
 	background-repeat: none;
 	height:100vh;
-	.fondoPrincipal_menu{
+	.fondoPrincipal__menu{
 		  display: flex;
 		  flex-direction: column;
 		  justify-content: center;
@@ -16,25 +16,107 @@
 		  align-content: center;
 		  height: 80vh;
 
+		.fondo__boton{
+			background-color: #4CAF50; /* Green */
+		    border: none;
+		    color: white;
+		    padding: 16px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		    cursor: pointer;
 
+
+		  }
 		h1{
 			
 			font-family:$fuenteM;
 			padding-bottom: 1%;		
 		
 		}
+		@media all and (max-width: 768px){
+		
+		padding-bottom: 30%;
+		
+		}
 	}
 	@media all and (max-width: 768px){
 		background-image: url(../media/fondoInicio2.jpg);
 		background-repeat: none;
+		
+		
 	}
 	@media all and (max-width: 550px){
+
 		background-image: url(../media/fondoInicio2.jpg);
 		background-repeat: none;
+	}
+	.fondoPrincipal__botones{
+		@media all and (max-width: 768px){
+		display:flex;
+		flex-direction:column;
+		align-items: center;
+		
+		}
+
+
+
 	}
 
 
 }
+/*clase predefinida de botones*/
+.button{
+	background-color: $cHead; 
+	border: none;
+	color: white;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: $fuente-m;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+.button1 {
+    background-color: white;
+    border-radius: 24px; 
+    color: black; 
+	transition-duration: 0.3s;
+    border: 2px solid $cHead;
+    width:14rem;
+
+}
+.button1:hover {
+    background-color: $cHead;
+    color: white;
+	transform:scale(1.1);
+}
+.button2{
+	background-color: white;
+    border-radius: 12px; 
+    color: black;
+    font-size: $fuente-s; 
+	transition-duration: 0.3s;
+    
+
+}
+.button2:hover {
+    background-color: $cHead;
+    color: white;
+	transform:scale(1.1);
+}
+
+
+
+
+
+
 
 
 
@@ -121,26 +203,12 @@ width:60px;
 		padding-left: 5%;
 
 	}
-	
-}
-#tipos{
-	#tituloParrafo{
-		h2{
-			padding:1%;
-			
-
-			font-weight: $fuenteR-bold;
-
-		}
-
-	}
-
 	.subBloques__grilla{
 	width:95%;
 	margin:auto;
 	display: grid;
 	gap: 1rem;
-	grid-auto-rows: 22rem;
+	grid-auto-rows: 23rem;
 	grid-template-columns: repeat(auto-fill, minmax(22rem,1fr));
 
 	}
@@ -179,21 +247,81 @@ width:60px;
 	}
 	img{
 		width: 22.5rem;
+		
 		margin: auto;
 		display: flex;
+	}
+
+	
+}
+
+#tituloParrafo{
+	h2{
+		padding:1%;
+		font-weight: $fuenteR-bold;
+		}
 	}
 
 
 	
 
-}
 
 
 #productos{
 	h2{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	} 
+	}
+}
+#producto{
+	.subBloques__grilla{
+	width:95%;
+	margin:auto;
+	display: grid;
+	gap: 1rem;
+	grid-auto-rows: 35rem;
+	grid-template-columns: repeat(auto-fill, minmax(23rem,1fr));
+
+	}
+	.grilla__bloques{
+		border:1px solid #010101;
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+		background-color: #f8f8f8;
+	}
+	
+
+	.tipos__nombres{
+		width:50%;
+		margin:auto;
+		text-align:center;
+		@media all and (max-width: 768px){
+			width:80%;
+
+		}
+
+
+
+	}
+	.btn-check:focus + .btn, .btn:focus{
+		box-shadow: none;
+
+	}
+	.modal-content{
+		height:100%;
+		width:45rem;
+
+		@media all and (max-width: 768px){
+		width:25rem;
+	}
+
+
+	}
+	img{
+		width: 22.5rem;
+		
+		margin: auto;
+		display: flex;
+	}
 
 }
 		
@@ -225,9 +353,23 @@ width:60px;
 		}
 	}
 }
-.redes{
-	img{
-		width:150px;
+#contactanos{
+	.bloqueContacto{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+
+
+	}
+	.mapa{
+		width:50%;
+	}
+		
+	.redes{
+		width:50%;
+		img{
+			width:150px;
+		}
 	}
 }
 a{
