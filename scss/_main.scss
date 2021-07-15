@@ -33,10 +33,13 @@
 
 		  }
 		h1{
-			
 			font-family:$fuenteM;
 			padding-bottom: 1%;		
-		
+		}
+		h2{
+			font-family:$fuenteM;
+			color:$cPrimario;
+
 		}
 		@media all and (max-width: 768px){
 		
@@ -98,21 +101,37 @@
 	transform:scale(1.1);
 }
 .button2{
-	background-color: white;
-    border-radius: 12px; 
+	background-color: $cFondo;
+    border-radius: 6px; 
     color: black;
     font-size: $fuente-s; 
 	transition-duration: 0.3s;
-    
-
 }
 .button2:hover {
     background-color: $cHead;
     color: white;
-	transform:scale(1.1);
+	transform:scale(1.09);
 }
 
+.button3{
+	background-color: $cHead;
+    border-radius: 12px; 
+    color: black;
+    font-size: $fuente-m; 
+	transition-duration: 0.3s;
+}
+.button3:hover {
+    color: white;
+	transform:scale(1.08);
+}
 
+.dropdown-item{
+	transition-duration: 0.3s;
+}
+.dropdown-item:hover{
+	
+	border-bottom:7px groove $cHead;
+}
 
 
 
@@ -175,6 +194,25 @@ width:60px;
 	width: ($ancho*3)/10;
 	margin: auto;
 }
+
+
+.grilla__img{
+	transition-duration: 0.3s;
+ 	padding-top:2%
+
+}
+.grilla__img:hover {
+ 	transform:scale(1.07);
+
+}
+
+
+
+	
+
+
+
+
 .subBloques{
 	padding-top: 1rem;
 }
@@ -187,6 +225,7 @@ width:60px;
 	color:#414b19;
 	border-bottom: 0.2rem double green;
 }
+
 .subBloques__parrafos{
 
 	h2{
@@ -208,14 +247,14 @@ width:60px;
 	margin:auto;
 	display: grid;
 	gap: 1rem;
-	grid-auto-rows: 23rem;
+	grid-auto-rows: 24rem;
 	grid-template-columns: repeat(auto-fill, minmax(22rem,1fr));
 
 	}
 	.grilla__bloques{
 		border:1px solid #010101;
 		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
-		background-color: #f8f8f8;
+		background-color: $cFondo;
 	}
 	
 
@@ -286,7 +325,7 @@ width:60px;
 	.grilla__bloques{
 		border:1px solid #010101;
 		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
-		background-color: #f8f8f8;
+		background-color: $cFondo;
 	}
 	
 
@@ -313,6 +352,10 @@ width:60px;
 		@media all and (max-width: 768px){
 		width:25rem;
 	}
+	.modal-footer {
+		text-align:center;
+
+	}
 
 
 	}
@@ -322,37 +365,28 @@ width:60px;
 		margin: auto;
 		display: flex;
 	}
+	.grilla__img:hover {
+ 	transform:scale(1.04);
 
+}
+
+}
+#tips{
+	.subBloques__parrafos{
+		width:97%;
+		margin:auto;
+		p{
+			border:1px solid #010101;
+		}
+
+	}
+	
+
+
+
+	
 }
 		
-.logoW{
-	position: fixed;
-	bottom:2%;
-	left:81.5%;
-	z-index: 10;
-	@media all and (max-width: 768px){
-		width:3rem;
-		left:85%;
-	}
-
-
-}
-.logoFinal{
-	width: ($ancho*28)/100;
-	margin:auto;
-	img{
-		width:$ancho;
-	}
-}
-.logo-back{
-	img{
-		height: 9%; 
-		transition: all 0.5s ease-in-out;
-		&:hover{
-			height: 11%;
-		}
-	}
-}
 #contactanos{
 	.bloqueContacto{
 		display:flex;
@@ -375,6 +409,57 @@ width:60px;
 		
 		img{
 			width:150px;
+		}
+	}
+}
+.logoW{
+	position: fixed;
+	bottom:2%;
+	left:81.5%;
+	z-index: 10;
+	@media all and (max-width: 768px){
+		width:3rem;
+		left:85%;
+	}
+
+}
+
+.foot{
+
+	display:flex;
+	background-color:#7c797a;
+	height:4rem;
+	justify-content: center;
+	
+	.redes{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width:30%;
+	
+		img{
+		width:4rem;
+		}
+		.face{
+			width:4.4rem;
+		}
+
+	}
+	
+}
+.logoFinal{
+	width: ($ancho*28)/100;
+	margin:auto;
+	img{
+		width:$ancho;
+	}
+}
+.logo-back{
+	img{
+		height: 9%; 
+		transition: all 0.5s ease-in-out;
+		&:hover{
+			height: 11%;
 		}
 	}
 }

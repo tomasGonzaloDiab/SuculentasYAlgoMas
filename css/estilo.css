@@ -34,6 +34,9 @@
     .fondoPrincipal .fondoPrincipal__menu h1 {
       font-family: "Merienda", sans-serif;
       padding-bottom: 1%; }
+    .fondoPrincipal .fondoPrincipal__menu h2 {
+      font-family: "Merienda", sans-serif;
+      color: #c3d27c; }
     @media all and (max-width: 768px) {
       .fondoPrincipal .fondoPrincipal__menu {
         padding-bottom: 30%; } }
@@ -79,8 +82,8 @@
   transform: scale(1.1); }
 
 .button2 {
-  background-color: white;
-  border-radius: 12px;
+  background-color: #f7efe5;
+  border-radius: 6px;
   color: black;
   font-size: 18px;
   transition-duration: 0.3s; }
@@ -88,7 +91,24 @@
 .button2:hover {
   background-color: #a9ba5a;
   color: white;
-  transform: scale(1.1); }
+  transform: scale(1.09); }
+
+.button3 {
+  background-color: #a9ba5a;
+  border-radius: 12px;
+  color: black;
+  font-size: 20px;
+  transition-duration: 0.3s; }
+
+.button3:hover {
+  color: white;
+  transform: scale(1.08); }
+
+.dropdown-item {
+  transition-duration: 0.3s; }
+
+.dropdown-item:hover {
+  border-bottom: 7px groove #a9ba5a; }
 
 header {
   display: flex;
@@ -137,6 +157,13 @@ header {
   width: 30%;
   margin: auto; }
 
+.grilla__img {
+  transition-duration: 0.3s;
+  padding-top: 2%; }
+
+.grilla__img:hover {
+  transform: scale(1.07); }
+
 .subBloques {
   padding-top: 1rem; }
 
@@ -165,13 +192,13 @@ header {
   margin: auto;
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 23rem;
+  grid-auto-rows: 24rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); }
 
 .subBloques__parrafos .grilla__bloques {
   border: 1px solid #010101;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  background-color: #f8f8f8; }
+  background-color: #f7efe5; }
 
 .subBloques__parrafos .tipos__nombres {
   width: 50%;
@@ -215,7 +242,7 @@ header {
 #producto .grilla__bloques {
   border: 1px solid #010101;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  background-color: #f8f8f8; }
+  background-color: #f7efe5; }
 
 #producto .tipos__nombres {
   width: 50%;
@@ -234,33 +261,22 @@ header {
   @media all and (max-width: 768px) {
     #producto .modal-content {
       width: 25rem; } }
+  #producto .modal-content .modal-footer {
+    text-align: center; }
 
 #producto img {
   width: 22.5rem;
   margin: auto;
   display: flex; }
 
-.logoW {
-  position: fixed;
-  bottom: 2%;
-  left: 81.5%;
-  z-index: 10; }
-  @media all and (max-width: 768px) {
-    .logoW {
-      width: 3rem;
-      left: 85%; } }
+#producto .grilla__img:hover {
+  transform: scale(1.04); }
 
-.logoFinal {
-  width: 28%;
+#tips .subBloques__parrafos {
+  width: 97%;
   margin: auto; }
-  .logoFinal img {
-    width: 100%; }
-
-.logo-back img {
-  height: 9%;
-  transition: all 0.5s ease-in-out; }
-  .logo-back img:hover {
-    height: 11%; }
+  #tips .subBloques__parrafos p {
+    border: 1px solid #010101; }
 
 #contactanos .bloqueContacto {
   display: flex;
@@ -278,6 +294,43 @@ header {
   width: 50%; }
   #contactanos .redes img {
     width: 150px; }
+
+.logoW {
+  position: fixed;
+  bottom: 2%;
+  left: 81.5%;
+  z-index: 10; }
+  @media all and (max-width: 768px) {
+    .logoW {
+      width: 3rem;
+      left: 85%; } }
+
+.foot {
+  display: flex;
+  background-color: #7c797a;
+  height: 4rem;
+  justify-content: center; }
+  .foot .redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%; }
+    .foot .redes img {
+      width: 4rem; }
+    .foot .redes .face {
+      width: 4.4rem; }
+
+.logoFinal {
+  width: 28%;
+  margin: auto; }
+  .logoFinal img {
+    width: 100%; }
+
+.logo-back img {
+  height: 9%;
+  transition: all 0.5s ease-in-out; }
+  .logo-back img:hover {
+    height: 11%; }
 
 a {
   text-decoration: none; }
