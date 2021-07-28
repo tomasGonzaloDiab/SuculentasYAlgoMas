@@ -74,22 +74,63 @@
 				<!-- bloque interior de parrafos y demas-->
 				<div class="subBloques__parrafos">
 					
-						<!-- bloque para dejar los enlaces de las redes sociales-->
+						<!-- bloque para dejar el formulario de contacto y el mapa donde se encuentra el local-->
 
-						<div class="bloqueContacto">							
-							<div class="redes">	
-								<a href="https://www.instagram.com/leomessi/" target="_blank">
-									<img src="../media/insta.png" alt="instagram">
-								</a>
-								<a href="https://www.facebook.com/" target="_blank">
-									<img src="../media/logoFace1.png" alt="Faceebook">
-								</a>
+						<div class="bloqueContacto">					
+							<div class="formulario">	
+								<form>
+									<div class="row">
+									    <div class="col">
+									    	<label for="">Nombre</label>
+									      <input type="text" class="form-control places" placeholder="Ingrese un nombre">
+									    </div>
+									    <div class="col">
+									    	<label for="">Apellido</label>
+									      <input type="text" class="form-control places" placeholder="Ingrese un apellido">
+									    </div>
+									</div>
+								  <div class="form-group">
+								    <label for="exampleFormControlInput1">Mail de contacto</label>
+								    <input type="email" class="form-control places" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+								  </div>
+								  <div class="form-group">
+								    <label  for="exampleFormControlSelect1">Que desea consultar</label>
+								    <select class="form-control places" id="exampleFormControlSelect1">
+								      <option class="places">-</option>
+								      <option class="places">Suculenta</option>
+								      <option class="places">Maceta</option>
+								      <option class="places">Cactus</option>
+								      <option class="places">Otra</option>
+								    </select>
+								  </div>
+								  <div class="form-group">
+								    <label for="exampleFormControlTextarea1">Cual es su consulta</label>
+								    <textarea class="form-control places" id="exampleFormControlTextarea1" rows="3"></textarea>
+								  </div>
+
+								<div class="consulta__boton">
+									<button type="button" id="Enviar" class="button button2" data-backdrop="false" data-dismiss="#envioContacto" data-toggle="modal" data-target="#envioContacto" >
+										Enviar
+									</button>
+									<div class="modal fade" id="envioContacto" tabindex="-1"  aria-hidden="true">
+									  <div class="modal-dialog">
+									    <div class="modal-content">						
+									      <div class="modal-body">
+									        Muchas gracias por contactarse! Su consulta será resuelta a la brevedad :)
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="button button2 buttonClose" data-dismiss="modal">Cerrar</button>
+									      </div>
+									    </div>
+									  </div>
+									</div>
+									<input class=" button button2 buttonClose" type="reset"  name="reset" value="Borrar ">	
+								</div>
+								</form>
 							</div>
 							<div class="mapa">								
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.0476895136574!2d-59.8729751818646!3d-36.78288241011887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9594270cb473174b%3A0x2f7ccb12e36c6a9c!2sAzul%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1626134187841!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1900.0476895136574!2d-59.8729751818646!3d-36.78288241011887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9594270cb473174b%3A0x2f7ccb12e36c6a9c!2sAzul%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1626134187841!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 							</div>
-
 						</div>
 				</div>
 			</div>
@@ -108,6 +149,7 @@
 		<a href="https://www.instagram.com/leomessi/" target="_blank">
 			<img src="../media/IgLetra.png" alt="instagram">
 		</a>	
+		<p>aloja gajitos</p>
 		<a  href="https://www.facebook.com/" target="_blank">
 			<img class="face" src="../media/faceLetra.png" alt="Faceebook">
 		</a>

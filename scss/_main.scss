@@ -111,6 +111,7 @@
     background-color: $cHead;
     color: white;
 	transform:scale(1.09);
+	border: 1px solid white;
 }
 
 .button3{
@@ -123,6 +124,10 @@
 .button3:hover {
     color: white;
 	transform:scale(1.08);
+}
+.buttonClose:hover{
+	background-color:#DB3232;
+
 }
 
 .dropdown-item{
@@ -174,6 +179,7 @@ width:60px;
 	}
 .menuPrincipal{
 	padding-top: 2rem;
+	padding-bottom: 6rem;
 	width: ($ancho*77)/100;
 	margin: auto;
 	background-color:$cPrimario;
@@ -187,8 +193,8 @@ width:60px;
 .fondo{
 	width: $ancho;
 	background-image: url(../media/fondoMacetas.png);
-	
 	background-color: $cFondo;
+	overflow: hidden;
 }
 .menuPrincipal2{
 	width: ($ancho*3)/10;
@@ -228,20 +234,7 @@ width:60px;
 
 .subBloques__parrafos{
 
-	h2{
-		padding-top: 1%;
-		margin:auto;
-		text-align: center;
-		color:#171d2d;
 
-
-	}
-	h3{
-		padding-bottom: 0.5%;
-		padding-top: 0.5%;
-		padding-left: 5%;
-
-	}
 	.subBloques__grilla{
 	width:95%;
 	margin:auto;
@@ -304,15 +297,45 @@ width:60px;
 
 	
 
-
+#tipos{
+	.subBloques__subtitulos{
+		@media all and (max-width: 768px){
+			width:40%;
+			text-align:center;
+		}
+	}
+}
 
 #productos{
 	h2{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	}
+	.subBloques__subtitulos{
+		@media all and (max-width: 768px){
+			width:40%;
+			text-align:center;
+		}
+	}
+	.tituloParrafo{
+		text-align: center;
+		h2{
+			font-weight: $fuenteR-bold;	
+		}
+	}
 }
 #producto{
+	.subBloques__subtitulos{
+		text-align:center;
+		@media all and (max-width: 768px){
+			width:40%;
+		}
+	}
+	#tituloParrafo{
+		text-align:center;
+
+	}
+
 	.subBloques__grilla{
 	width:95%;
 	margin:auto;
@@ -375,9 +398,67 @@ width:60px;
 	.subBloques__parrafos{
 		width:97%;
 		margin:auto;
-		p{
-			border:1px solid #010101;
+		h2{
+			padding-top: 1%;
+			margin:auto;
+			text-align: center;
+			color:#171d2d;
 		}
+		.parrafos__subtitulos{
+			display: flex;
+			width: 88%;
+			justify-content: flex-start;
+			padding-bottom: 0.5%;
+			padding-top: 0.5%;
+			padding-left: 5%;
+			font-size:$fuente-l;
+			font-weight:$fuenteR-bold;
+			font-family:$fuenteM;
+			@media all and (max-width: 768px){
+				width:100%;
+				justify-content:center;
+				padding-top: 3%;
+			}
+
+		}
+		.parrafos__subtitulos2{
+			justify-content: flex-end;
+			width: 90%;
+			@media all and (max-width: 768px){
+				width:100%;
+				justify-content:center;
+				padding-top: 3%;
+			}
+		}
+		.parrafos__texto{
+			width:75%;
+			margin-left: 2rem;
+			text-align:start;
+			@media all and (max-width: 768px){
+				width:90%;
+				margin-left: 1rem;
+			}
+
+		}
+		.parrafos__texto2{
+			text-align:start;
+			margin-left: 12rem;
+			@media all and (max-width: 768px){
+				width:90%;
+				margin-left: 1rem;
+			}
+
+		}
+		.containerP{
+			border-left: 10px double $cHead;
+			border-bottom:6px dashed $cHead;
+		}		
+		.containerP2{
+			border-right: 10px double $cHead;
+			border-bottom:6px dashed $cHead;
+		}
+
+
 
 	}
 	
@@ -388,10 +469,18 @@ width:60px;
 }
 		
 #contactanos{
+	.subBloques__subtitulos{
+
+		@media all and (max-width: 768px){
+			width:50%;
+			text-align:center;
+		}
+	
+
+
+	}
 	.bloqueContacto{
-		display:flex;
-		justify-content:center;
-		align-items:center;
+
 		@media all and (max-width: 768px){
 		flex-direction:column;
 		align-items:flex-start;
@@ -400,16 +489,54 @@ width:60px;
 
 	}
 	.mapa{
-		width:50%;
+		display:flex;
+		width:100%;
+		justify-content:center;
+
+		iframe{
+			width:40rem;
+			height:30rem;
+
+		}
 		
 	}
 		
-	.redes{
-		width:50%;
-		
-		img{
-			width:150px;
+	.formulario{
+		width: 75%;
+	    margin: auto;
+	    margin-bottom: 2rem;
+	    margin-top: 2rem;
+
+	    .form-control{
+			&:focus{
+				box-shadow:inset 2px 2px 2px 2px $cHead;
+		    	outline: none ;
+		    	border-color: $cHead;
+			}
 		}
+		.modal-content{
+			width: 40rem;
+			margin: auto;
+		}
+		label{
+			font-family:$fuenteM;
+			font-size:$fuente-m;
+			padding-top:1rem;
+		}
+		.places{
+			font-family:$fuenteR;
+			font-weight:$fuenteR-bold;
+
+		}
+	    textarea{
+	    	resize: none;
+	    }
+	    .consulta__boton{
+	    	display:flex;
+	    	justify-content:space-evenly;
+	    	padding-top:1rem;
+	    }
+
 	}
 }
 .logoW{
@@ -430,7 +557,13 @@ width:60px;
 	background-color:#7c797a;
 	height:4rem;
 	justify-content: center;
-	
+	overflow: hidden;
+	p{
+		font-family:$fuenteJ;
+		font-size:$fuente-m;
+		margin-bottom: 0;
+		margin-top: 1rem;
+	}
 	.redes{
 		display: flex;
 		justify-content: space-around;
@@ -443,6 +576,11 @@ width:60px;
 		.face{
 			width:4.4rem;
 		}
+		@media all and (max-width: 768px){
+		width:60%;
+
+		}
+
 
 	}
 	

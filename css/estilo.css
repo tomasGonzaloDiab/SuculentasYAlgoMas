@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +92,8 @@
 .button2:hover {
   background-color: #a9ba5a;
   color: white;
-  transform: scale(1.09); }
+  transform: scale(1.09);
+  border: 1px solid white; }
 
 .button3 {
   background-color: #a9ba5a;
@@ -103,6 +105,9 @@
 .button3:hover {
   color: white;
   transform: scale(1.08); }
+
+.buttonClose:hover {
+  background-color: #DB3232; }
 
 .dropdown-item {
   transition-duration: 0.3s; }
@@ -139,6 +144,7 @@ header {
 
 .menuPrincipal {
   padding-top: 2rem;
+  padding-bottom: 6rem;
   width: 77%;
   margin: auto;
   background-color: #c3d27c; }
@@ -151,7 +157,8 @@ header {
 .fondo {
   width: 100%;
   background-image: url(../media/fondoMacetas.png);
-  background-color: #f7efe5; }
+  background-color: #f7efe5;
+  overflow: hidden; }
 
 .menuPrincipal2 {
   width: 30%;
@@ -175,17 +182,6 @@ header {
   font-family: "Merienda", sans-serif;
   color: #414b19;
   border-bottom: 0.2rem double green; }
-
-.subBloques__parrafos h2 {
-  padding-top: 1%;
-  margin: auto;
-  text-align: center;
-  color: #171d2d; }
-
-.subBloques__parrafos h3 {
-  padding-bottom: 0.5%;
-  padding-top: 0.5%;
-  padding-left: 5%; }
 
 .subBloques__parrafos .subBloques__grilla {
   width: 95%;
@@ -227,9 +223,33 @@ header {
   padding: 1%;
   font-weight: 700; }
 
+@media all and (max-width: 768px) {
+  #tipos .subBloques__subtitulos {
+    width: 40%;
+    text-align: center; } }
+
 #productos h2 {
   padding-top: 1rem;
   padding-bottom: 1rem; }
+
+@media all and (max-width: 768px) {
+  #productos .subBloques__subtitulos {
+    width: 40%;
+    text-align: center; } }
+
+#productos .tituloParrafo {
+  text-align: center; }
+  #productos .tituloParrafo h2 {
+    font-weight: 700; }
+
+#producto .subBloques__subtitulos {
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #producto .subBloques__subtitulos {
+      width: 40%; } }
+
+#producto #tituloParrafo {
+  text-align: center; }
 
 #producto .subBloques__grilla {
   width: 95%;
@@ -275,25 +295,99 @@ header {
 #tips .subBloques__parrafos {
   width: 97%;
   margin: auto; }
-  #tips .subBloques__parrafos p {
-    border: 1px solid #010101; }
+  #tips .subBloques__parrafos h2 {
+    padding-top: 1%;
+    margin: auto;
+    text-align: center;
+    color: #171d2d; }
+  #tips .subBloques__parrafos .parrafos__subtitulos {
+    display: flex;
+    width: 88%;
+    justify-content: flex-start;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    padding-left: 5%;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Merienda", sans-serif; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__subtitulos {
+        width: 100%;
+        justify-content: center;
+        padding-top: 3%; } }
+  #tips .subBloques__parrafos .parrafos__subtitulos2 {
+    justify-content: flex-end;
+    width: 90%; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__subtitulos2 {
+        width: 100%;
+        justify-content: center;
+        padding-top: 3%; } }
+  #tips .subBloques__parrafos .parrafos__texto {
+    width: 75%;
+    margin-left: 2rem;
+    text-align: start; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__texto {
+        width: 90%;
+        margin-left: 1rem; } }
+  #tips .subBloques__parrafos .parrafos__texto2 {
+    text-align: start;
+    margin-left: 12rem; }
+    @media all and (max-width: 768px) {
+      #tips .subBloques__parrafos .parrafos__texto2 {
+        width: 90%;
+        margin-left: 1rem; } }
+  #tips .subBloques__parrafos .containerP {
+    border-left: 10px double #a9ba5a;
+    border-bottom: 6px dashed #a9ba5a; }
+  #tips .subBloques__parrafos .containerP2 {
+    border-right: 10px double #a9ba5a;
+    border-bottom: 6px dashed #a9ba5a; }
 
-#contactanos .bloqueContacto {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  @media all and (max-width: 768px) {
-    #contactanos .bloqueContacto {
-      flex-direction: column;
-      align-items: flex-start; } }
+@media all and (max-width: 768px) {
+  #contactanos .subBloques__subtitulos {
+    width: 50%;
+    text-align: center; } }
+
+@media all and (max-width: 768px) {
+  #contactanos .bloqueContacto {
+    flex-direction: column;
+    align-items: flex-start; } }
 
 #contactanos .mapa {
-  width: 50%; }
+  display: flex;
+  width: 100%;
+  justify-content: center; }
+  #contactanos .mapa iframe {
+    width: 40rem;
+    height: 30rem; }
 
-#contactanos .redes {
-  width: 50%; }
-  #contactanos .redes img {
-    width: 150px; }
+#contactanos .formulario {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+  #contactanos .formulario .form-control:focus {
+    box-shadow: inset 2px 2px 2px 2px #a9ba5a;
+    outline: none;
+    border-color: #a9ba5a; }
+  #contactanos .formulario .modal-content {
+    width: 40rem;
+    margin: auto; }
+  #contactanos .formulario label {
+    font-family: "Merienda", sans-serif;
+    font-size: 20px;
+    padding-top: 1rem; }
+  #contactanos .formulario .places {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700; }
+  #contactanos .formulario textarea {
+    resize: none; }
+  #contactanos .formulario .consulta__boton {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem; }
 
 .logoW {
   position: fixed;
@@ -309,7 +403,13 @@ header {
   display: flex;
   background-color: #7c797a;
   height: 4rem;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
+  .foot p {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 1rem; }
   .foot .redes {
     display: flex;
     justify-content: space-around;
@@ -319,6 +419,9 @@ header {
       width: 4rem; }
     .foot .redes .face {
       width: 4.4rem; }
+    @media all and (max-width: 768px) {
+      .foot .redes {
+        width: 60%; } }
 
 .logoFinal {
   width: 28%;
