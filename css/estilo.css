@@ -1,3 +1,4 @@
+/*quitamos los margenes de nuestra pagina, y asignamos una fuente por defecto*/
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,400&display=swap");
@@ -6,10 +7,12 @@
   padding: 0;
   font-family: "Roboto", sans-serif; }
 
+/*seccion donde definimos la estructura de la pagina de inicio */
 .fondoPrincipal {
   background-image: url(../media/sucuFondoPri1.jpg);
   background-repeat: none;
-  height: 100vh; }
+  height: 100vh;
+  /*cambiaremos la imagen de fondo dependiendo el ancho de la pantalla*/ }
   .fondoPrincipal .fondoPrincipal__menu {
     display: flex;
     flex-direction: column;
@@ -114,12 +117,13 @@
 .dropdown-item:hover {
   border-bottom: 7px groove #a9ba5a; }
 
+/*Le damos estilo a nuestro header*/
 header {
   display: flex;
   position: fixed;
   width: 100%;
   background-color: #a9ba5a;
-  z-index: 1; }
+  z-index: 10; }
 
 .logo-header {
   display: flex;
@@ -141,6 +145,7 @@ header {
   .navbar-nav .nav-link:hover {
     color: red; }
 
+/*La seccion que contrendra toda la informacion mas importante de la pagina*/
 .menuPrincipal {
   padding-top: 2rem;
   padding-bottom: 6rem;
@@ -153,6 +158,7 @@ header {
       text-align: center;
       padding-top: 10%; } }
 
+/*Nuestro fondo de pagina. Le asignamos una imagen y cuando esta ya no se vea porque el menuPrincipal la tape, la quitamos*/
 .fondo {
   width: 100%;
   background-image: url(../media/fondoMacetas.png);
@@ -166,12 +172,14 @@ header {
   width: 30%;
   margin: auto; }
 
+/*El titulo de cada seccion, ya sea tipos productos etc*/
 #tituloParrafo {
   text-align: center; }
   #tituloParrafo h2 {
     padding: 1%;
     font-weight: 700; }
 
+/*Le damos ciertas caracteristicas en comun a la seccion de grillas de tipos y productos*/
 .grilla__img {
   transition-duration: 0.3s;
   padding-top: 2%; }
@@ -188,6 +196,7 @@ header {
   color: #414b19;
   border-bottom: 0.2rem double green; }
 
+/*definimos nuestra pagina de tipos, con sus respectivos responsive*/
 @media all and (max-width: 768px) {
   #tipos .subBloques__subtitulos {
     width: 40%;
@@ -232,6 +241,7 @@ header {
   margin: auto;
   display: flex; }
 
+/*En nuestra pagina de productos, aqui definimos la segunda parte donde se encuentran las macetas y los cactus*/
 #productos h2 {
   padding-top: 1rem;
   padding-bottom: 1rem; }
@@ -254,6 +264,10 @@ header {
     #productos .carrou {
       width: 75%; } }
 
+#productos .carousel-control-prev-icon, #productos .carousel-control-next-icon {
+  background-color: #798076; }
+
+/*Aqui damos estilo a la seccion de suculentas de la pagina productos*/
 #producto .subBloques__subtitulos {
   text-align: center; }
   @media all and (max-width: 768px) {
@@ -308,6 +322,7 @@ header {
 #producto .grilla__img:hover {
   transform: scale(104%); }
 
+/*Definimos la pagina de tips*/
 #tips .subBloques__parrafos {
   width: 97%;
   margin: auto; }
@@ -361,6 +376,7 @@ header {
     border-right: 10px double #a9ba5a;
     border-bottom: 6px dashed #a9ba5a; }
 
+/*Le damos estilo a la pagina de contacto, ya sea el formulario como el iframe que representa el mapa de nuestro local*/
 @media all and (max-width: 768px) {
   #contactanos .subBloques__subtitulos {
     width: 50%;
@@ -416,6 +432,7 @@ header {
     justify-content: space-evenly;
     padding-top: 1rem; }
 
+/*Definimos el footer de nuestras paginas*/
 .foot {
   display: flex;
   background-color: #7c797a;
@@ -443,5 +460,6 @@ header {
       .foot .redes {
         width: 80%; } }
 
+/*removemos la posible decoracion de nuestros links*/
 a {
   text-decoration: none; }
