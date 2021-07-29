@@ -92,8 +92,7 @@
 .button2:hover {
   background-color: #a9ba5a;
   color: white;
-  transform: scale(1.09);
-  border: 1px solid white; }
+  transform: scale(1.07); }
 
 .button3 {
   background-color: #a9ba5a;
@@ -159,17 +158,23 @@ header {
   background-image: url(../media/fondoMacetas.png);
   background-color: #f7efe5;
   overflow: hidden; }
+  @media all and (max-width: 768px) {
+    .fondo {
+      background-image: none; } }
 
 .menuPrincipal2 {
   width: 30%;
   margin: auto; }
 
+#tituloParrafo {
+  text-align: center; }
+  #tituloParrafo h2 {
+    padding: 1%;
+    font-weight: 700; }
+
 .grilla__img {
   transition-duration: 0.3s;
   padding-top: 2%; }
-
-.grilla__img:hover {
-  transform: scale(1.07); }
 
 .subBloques {
   padding-top: 1rem; }
@@ -183,7 +188,15 @@ header {
   color: #414b19;
   border-bottom: 0.2rem double green; }
 
-.subBloques__parrafos .subBloques__grilla {
+@media all and (max-width: 768px) {
+  #tipos .subBloques__subtitulos {
+    width: 40%;
+    text-align: center; } }
+
+#tipos .grilla__img:hover {
+  transform: scale(106.5%); }
+
+#tipos .subBloques__parrafos .subBloques__grilla {
   width: 95%;
   margin: auto;
   display: grid;
@@ -191,56 +204,55 @@ header {
   grid-auto-rows: 24rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); }
 
-.subBloques__parrafos .grilla__bloques {
+#tipos .subBloques__parrafos .grilla__bloques {
   border: 1px solid #010101;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   background-color: #f7efe5; }
 
-.subBloques__parrafos .tipos__nombres {
+#tipos .subBloques__parrafos .tipos__nombres {
   width: 50%;
   margin: auto;
   text-align: center; }
   @media all and (max-width: 768px) {
-    .subBloques__parrafos .tipos__nombres {
+    #tipos .subBloques__parrafos .tipos__nombres {
       width: 80%; } }
 
-.subBloques__parrafos .btn-check:focus + .btn, .subBloques__parrafos .btn:focus {
+#tipos .subBloques__parrafos .btn-check:focus + .btn, #tipos .subBloques__parrafos .btn:focus {
   box-shadow: none; }
 
-.subBloques__parrafos .modal-content {
+#tipos .subBloques__parrafos .modal-content {
   height: 100%;
   width: 45rem; }
   @media all and (max-width: 768px) {
-    .subBloques__parrafos .modal-content {
-      width: 25rem; } }
+    #tipos .subBloques__parrafos .modal-content {
+      width: 24rem; } }
 
-.subBloques__parrafos img {
+#tipos .subBloques__parrafos img {
   width: 22.5rem;
   margin: auto;
   display: flex; }
-
-#tituloParrafo h2 {
-  padding: 1%;
-  font-weight: 700; }
-
-@media all and (max-width: 768px) {
-  #tipos .subBloques__subtitulos {
-    width: 40%;
-    text-align: center; } }
 
 #productos h2 {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-@media all and (max-width: 768px) {
-  #productos .subBloques__subtitulos {
-    width: 40%;
-    text-align: center; } }
+#productos .subBloques__subtitulos {
+  text-align: center; }
+  @media all and (max-width: 768px) {
+    #productos .subBloques__subtitulos {
+      width: 40%; } }
 
 #productos .tituloParrafo {
   text-align: center; }
   #productos .tituloParrafo h2 {
     font-weight: 700; }
+
+#productos .carrou {
+  width: 50%;
+  margin: auto; }
+  @media all and (max-width: 768px) {
+    #productos .carrou {
+      width: 75%; } }
 
 #producto .subBloques__subtitulos {
   text-align: center; }
@@ -280,9 +292,13 @@ header {
   width: 45rem; }
   @media all and (max-width: 768px) {
     #producto .modal-content {
-      width: 25rem; } }
-  #producto .modal-content .modal-footer {
-    text-align: center; }
+      width: 24rem; } }
+  #producto .modal-content .modal-footer p {
+    text-align: center;
+    width: 80%; }
+    @media all and (max-width: 768px) {
+      #producto .modal-content .modal-footer p {
+        width: 50%; } }
 
 #producto img {
   width: 22.5rem;
@@ -290,7 +306,7 @@ header {
   display: flex; }
 
 #producto .grilla__img:hover {
-  transform: scale(1.04); }
+  transform: scale(104%); }
 
 #tips .subBloques__parrafos {
   width: 97%;
@@ -362,6 +378,14 @@ header {
   #contactanos .mapa iframe {
     width: 40rem;
     height: 30rem; }
+    @media all and (max-width: 840px) {
+      #contactanos .mapa iframe {
+        width: 30rem;
+        height: 22.5rem; } }
+    @media all and (max-width: 500px) {
+      #contactanos .mapa iframe {
+        width: 19rem;
+        height: 14.25rem; } }
 
 #contactanos .formulario {
   width: 75%;
@@ -375,6 +399,9 @@ header {
   #contactanos .formulario .modal-content {
     width: 40rem;
     margin: auto; }
+    @media all and (max-width: 768px) {
+      #contactanos .formulario .modal-content {
+        width: 24rem; } }
   #contactanos .formulario label {
     font-family: "Merienda", sans-serif;
     font-size: 20px;
@@ -388,16 +415,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding-top: 1rem; }
-
-.logoW {
-  position: fixed;
-  bottom: 2%;
-  left: 81.5%;
-  z-index: 10; }
-  @media all and (max-width: 768px) {
-    .logoW {
-      width: 3rem;
-      left: 85%; } }
 
 .foot {
   display: flex;
@@ -422,18 +439,9 @@ header {
     @media all and (max-width: 768px) {
       .foot .redes {
         width: 60%; } }
-
-.logoFinal {
-  width: 28%;
-  margin: auto; }
-  .logoFinal img {
-    width: 100%; }
-
-.logo-back img {
-  height: 9%;
-  transition: all 0.5s ease-in-out; }
-  .logo-back img:hover {
-    height: 11%; }
+    @media all and (max-width: 550px) {
+      .foot .redes {
+        width: 80%; } }
 
 a {
   text-decoration: none; }
